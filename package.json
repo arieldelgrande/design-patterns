@@ -22,6 +22,7 @@
   "homepage": "https://github.com/arieldelgrande/design-patterns#readme",
   "devDependencies": {
     "@types/node": "^22.15.29",
+    "prettier": "3.5.3",
     "rimraf": "^6.0.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
