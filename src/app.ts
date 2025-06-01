@@ -1,10 +1,10 @@
 import { total } from "./abstraction";
-import { answer } from "./lsp-principle";
+import { account, answer } from "./lsp-principle";
 
 (() => {
   app();
 })();
 
 function app() {
-  console.log(answer);
+  console.log(account);
 }

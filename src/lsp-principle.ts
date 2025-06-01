@@ -36,3 +36,41 @@ const area = (shape: Shape) => {
 const square: Square = new Square(10);
 
 export const answer = area(square);
+
+//Todo: Excercise
+
+// Payment Processor
+// Credit Card
+// Debit Card
+// Paypal
+
+abstract class PaymentProcessor {
+  abstract payment(amount: number): string;
+}
+
+class CreditCard implements PaymentProcessor {
+  payment(amount: number): string {
+    return `Succesfully deposit the amount of ${amount} in your account`;
+  }
+}
+
+class DebitCard implements PaymentProcessor {
+  payment(amount: number): string {
+    return `Succesfully deposit the amount of ${amount} in your Debit Card`;
+  }
+}
+
+class Paypal implements PaymentProcessor {
+  payment(amount: number): string {
+    return `Succesfully deposit the amount of ${amount} in your account`;
+  }
+}
+
+//* client code
+const deposit = (paymentProccesor: PaymentProcessor, quantity: number) => {
+  return paymentProccesor.payment(quantity);
+};
+
+const debitCard: DebitCard = new DebitCard();
+
+export const account = deposit(debitCard, 20);
