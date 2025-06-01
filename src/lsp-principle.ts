@@ -37,7 +37,7 @@ const square: Square = new Square(10);
 
 export const answer = area(square);
 
-//Todo: Excercise
+//Todo: Exercise
 
 // Payment Processor
 // Credit Card
@@ -50,25 +50,25 @@ abstract class PaymentProcessor {
 
 class CreditCard implements PaymentProcessor {
   payment(amount: number): string {
-    return `Succesfully deposit the amount of ${amount} in your account`;
+    return `Successfully deposit the amount of ${amount} in your account`;
   }
 }
 
 class DebitCard implements PaymentProcessor {
   payment(amount: number): string {
-    return `Succesfully deposit the amount of ${amount} in your Debit Card`;
+    return `Successfully deposit the amount of ${amount} in your Debit Card`;
   }
 }
 
 class Paypal implements PaymentProcessor {
   payment(amount: number): string {
-    return `Succesfully deposit the amount of ${amount} in your account`;
+    return `Successfully deposit the amount of ${amount} in your account`;
   }
 }
 
 //* client code
-const deposit = (paymentProccesor: PaymentProcessor, quantity: number) => {
-  return paymentProccesor.payment(quantity);
+const deposit = (paymentProcessor: PaymentProcessor, quantity: number) => {
+  return paymentProcessor.payment(quantity);
 };
 
 const debitCard: DebitCard = new DebitCard();

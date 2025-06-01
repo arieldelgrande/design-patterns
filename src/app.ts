@@ -1,10 +1,11 @@
 import { total } from "./abstraction";
-import { account, answer } from "./lsp-principle";
+import { answer } from "./dip-principle";
+import { account } from "./lsp-principle";
 
 (() => {
   app();
 })();
 
 function app() {
-  console.log(account);
+  console.log(answer, "ariel");
 }
